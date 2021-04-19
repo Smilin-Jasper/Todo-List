@@ -62,12 +62,10 @@ function createTask(taskText = document.createTextNode(enterTask.value)) {
         editTaskButton.className = "edit-task-button";
         const removeTaskButton = document.createElement("button");
         removeTaskButton.className = "checkmark-button";
-        const removeTaskButtonText = document.createTextNode("-");
 
         taskDiv.appendChild(taskOptionsDiv);
         taskOptionsDiv.appendChild(editTaskButton);
         taskOptionsDiv.appendChild(removeTaskButton);
-        removeTaskButton.appendChild(removeTaskButtonText);
         const applyEditButton = document.createElement("button");
         applyEditButton.className = "checkmark-button";
 

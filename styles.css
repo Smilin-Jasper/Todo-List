@@ -1,0 +1,213 @@
+html {
+    background: linear-gradient(360deg, #0054d6e6, #0A99FF);
+    height: 100%;
+    background-attachment: fixed;
+}
+
+body {
+    font-family: 'Alata', sans-serif;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input.enter-task {
+    width: 60%;
+    height: 20px;
+    padding: 1rem;
+    font-family: 'Alata', sans-serif;
+    font-size: 22px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    background-color: #faa789;
+    font-size: 30px;
+    border: transparent;
+    border-radius: 25px;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.add-task-button {
+    background-image: url(Images/add_task_button.png);
+    background-size: contain;
+}
+
+div.app-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    width: 564px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p.no-task-warning {
+    position: absolute;
+    left: 30%;
+    top: 75%;
+    font-size: 12px;
+}
+
+p.no-task-warning::before {
+    content: url("Images/alert.png");
+    padding-right: 2px;
+}
+
+p.no-task-warning-edit {
+    position: absolute;
+    top: 55%;
+    font-size: 12px;
+}
+
+p.no-task-warning-edit::before {
+    content: url("Images/alert.png");
+    padding-right: 2px;
+}
+
+div.app-tasks {
+    position: absolute;
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    width: 564px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 12px;
+}
+
+div.task-div {
+    height: 125px;
+    width: 100%;
+    background: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 12px;
+    border-bottom: 10px solid #CC27D8;
+    border-radius: 10px;
+}
+
+div.task-text-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+div.task-options-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+p.task {
+    outline: none;
+    max-width: 400px;
+    min-width: 10px;
+}
+
+p.strike-through {
+    position: relative;
+    animation-name: change-color;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+p.strike-through::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: gray;
+    height: 2px;
+    animation-name: strike-through;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+button.edit-task-button {
+    background-image: url("Images/edit.png");
+    background-size: cover;
+}
+
+button.checkmark-button {
+    background-image: url("Images/checkmark.png");
+    background-size: contain;
+}
+
+input.due-date-picker {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-image: url("Images/calendar.png");
+    background-size: contain;
+}
+
+@keyframes strike-through {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes change-color {
+    from {
+        color: auto;
+    }
+    to {
+        color: gray;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    div.app-menu {
+        width: 300px;
+    }
+    p {
+        font-size: 20px;
+    }
+    input.enter-task {
+        height: 10px;
+        width: 44%;
+        font-size: 20px;
+    }
+    button {
+        height: 40px;
+        width: 40px;
+    }
+    div.app-tasks {
+        top: 95px;
+        width: 290px;
+    }
+    div.task-div {
+        height: 80px;
+    }
+}

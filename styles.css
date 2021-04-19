@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(360deg, #007dd6, rgba(0, 149, 255, 0.5));
+    background: linear-gradient(360deg, #0054d6e6, #0A99FF);
     height: 100%;
     background-attachment: fixed;
 }
@@ -14,13 +14,14 @@ p {
 }
 
 input.enter-task {
-    padding: 1rem;
     width: 60%;
-    font-size: 22px;
-    font-family: 'Alata', sans-serif;
-    border-radius: 25px;
-    outline: none;
     height: 20px;
+    padding: 1rem;
+    font-family: 'Alata', sans-serif;
+    font-size: 22px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
 }
 
 button {
@@ -35,6 +36,11 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+.add-task-button {
+    background-image: url(Images/add_task_button.png);
+    background-size: contain;
 }
 
 div.app-menu {
@@ -181,7 +187,7 @@ input.due-date-picker {
     }
 }
 
-@media only screen and (max-width: 594px) {
+@media only screen and (max-width: 690px) {
     div.app-menu {
         width: 300px;
     }

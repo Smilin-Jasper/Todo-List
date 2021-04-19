@@ -7,7 +7,7 @@ appTasksDiv.className = "app-tasks";
 const add = document.createElement("p");
 const addText = document.createTextNode("TO-DO");
 const addButton = document.createElement("button");
-const addButtonText = document.createTextNode("+");
+addButton.className = "add-task-button";
 const enterTask = document.createElement("input");
 enterTask.className = "enter-task";
 enterTask.type = "text";
@@ -25,7 +25,6 @@ appMenuDiv.appendChild(add);
 add.appendChild(addText);
 appMenuDiv.appendChild(enterTask);
 appMenuDiv.appendChild(addButton);
-addButton.appendChild(addButtonText);
 noTaskWarning.appendChild(noTaskWarningText);
 noTaskWarningEdit.appendChild(noTaskWarningEditText);
 
